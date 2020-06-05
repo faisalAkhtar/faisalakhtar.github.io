@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v8=qAJ44G5Bm7">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v8=qAJ44G5Bm7">
+<link rel="shortcut icon" href="/favicon.ico?v8=qAJ44G5Bm7">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#6c63ff"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v8=qAJ44G5Bm7">
+<meta property="og:title" content="Faisal Akhtar Portfolio"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://faisalakhtar.github.io/"/>
+<meta property="og:image" content="https://faisalakhtar.github.io/img/Faisal.jpg"/>
+<link rel="preload" href="Montserrat-Regular.ttf" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="Agustina.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<title>Faisal Akhtar</title>
+<style type="text/css">
+@font-face{font-family:Agustina;font-style:normal;font-weight:400;src:local("Agustina"),url(Agustina.woff);font-display:swap}
+@font-face{font-family:Montserrat;src:local("Montserrat"),url(Montserrat-Regular.ttf);font-display:swap}
+code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}
+*{box-sizing:border-box;}
+html,body{scroll-behavior:smooth;}
+body{font:19px 'Montserrat',sans-serif;margin:0;}
+
+header,main{max-width:90%;padding:20px 10px;margin:0 auto;}
+h1{line-height:1.1;}
+p,footer{color:#868e96;}
+ul{list-style-type:none;padding:0;margin:0;clear:both;overflow:hidden;}
+
+header{display:flex;align-items:center;justify-content:space-between;}
+header .logo{color:#868e96;font-size:1.5em;}
+header .logo span{font-family:Agustina;color:darkBlue;font-weight:bold;margin:0 10px;}
+header ul li{float:left;}
+header ul li a{display:block;padding:20px;margin-left:10px;text-decoration:none;color:black;transition-duration:0.2s;}
+header ul li a:hover{background-color:#f4f4f4;}
+
+.card-divs{clear:both;}
+.cards{width:calc(33.33% - 2rem - 2px);float:left;box-shadow:0 10px 30px -15px rgba(0,0,0,.2);border-radius:10px;border:1px solid hsla(0,0%,82.7%,.397);text-align:center;overflow:hidden;transition-duration:0.2s;}
+.cards{margin:1rem;}
+.cards:nth-child(3n+1){margin-left:0;}
+.cards:nth-child(3n){margin-right:0;}
+.cards:hover{box-shadow:0 20px 30px -10px rgba(0,0,0,.2);}
+.card-header img{height:100%;width:auto;}
+.card-content{padding:2rem;}
+.card-content h5{font-size:20px;padding-top:1rem;line-height:normal;margin:0;}
+.card-content h5:first-child{font-size:25px;padding-top:1.5rem;margin:0;}
+
+main{margin-top:2rem;display:flex;}
+main:nth-child(2n+1){margin-top:4rem;}
+main>*{flex:1 1;margin-bottom:30px;position:relative;}
+.landing h1{font-size:70px;}
+.landing p{font-size:30px;line-height:60px;}
+.social-media{font-size:2em;margin-top:20px;}
+.social-media i{color:#fff;border-radius:2.6rem;cursor:pointer;display:inline-block;font-size:1.3rem;height:2.6rem;line-height:2.6rem;position:relative;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:2.6rem;margin:0 5px 10px;transition-duration:0.2s;}
+.social-media i:hover{font-size:1.5rem;}
+.fa-github{background-color:#333333}
+.fa-github:hover{background-color:transparent;color:#333333;}
+.fa-linkedin-in{background-color:#0e76a8}
+.fa-linkedin-in:hover{background-color:transparent;color:#0e76a8;}
+.fa-facebook-f{background-color:#3b5998}
+.fa-facebook-f:hover{background-color:transparent;color:#3b5998;}
+.fa-instagram{background-color:#f2003c}
+.fa-instagram:hover{background-color:transparent;color:#f2003c;}
+.fa-twitter{background-color:#00acee}
+.fa-twitter:hover{background-color:transparent;color:#00acee;}
+
+.main-div h1,main h1{font-weight:400;font-size:56px;}
+
+.skill-set{font-size:3rem;text-align:center;}
+.skill-set li{display:inline-block;margin:0 20px 20px 0;}
+.skill-set li i{color:#868e96;transition-duration:0.25s;}
+.skill-set li i:hover{color:#645beb;}
+.skill-set li p{font-size:10px;}
+
+.skills-meter{line-height:3.5vw;}
+.skills-meter .meter{height:20px;position:relative;background-color:#f3efef;border-radius:20px;transition-duration:0.2s;box-shadow:0 0.1rem 0.4rem rgba(0, 0, 0, 0.25);}
+.skills-meter .meter:hover{box-shadow:0 0.2rem 0.5rem rgba(0, 0, 0, 0.25);}
+.skills-meter .meter>span{display:block;height:100%;border-top-right-radius:6px;border-bottom-right-radius:6px;border-top-left-radius:20px;border-bottom-left-radius:20px;background-color:#aaa5ff;position:relative;overflow:hidden;}
+
+.experience .card-gradient{height:11rem;background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.2));z-index:-1;filter:blur(5px);}
+.experience .card-header{height:11rem;position:relative;z-index:0;}
+.experience .card-header h5{position:absolute;width:100%;top:2.5rem;color:#ffffff;font-size:25px;font-weight:700;}
+.experience .card-header img{position:absolute;width:8rem;height:8rem;top:7rem;left:0;right:0;margin:0 auto;border-radius:50%;background-color:white;box-shadow:0 0.5rem 1rem rgba(0,0,0,.3);}
+.experience .card-content{margin-top:2rem;}
+
+.projects{clear:both;}
+.projects a{float:left;padding:1rem;width:15%;margin-right:5%;height:10rem;transition-duration:0.2s;}
+.projects a:hover{box-shadow:0 10px 30px -15px rgba(0,0,0,.2);}
+.projects a img{max-width:100%;max-height:100%;position:relative;top:50%;transform:translateY(-50%);}
+
+.achievements .card-header{height:12rem;position:relative;z-index:0;}
+.achievements .card-content{padding-top:0;}
+.achievements .card-content h5{font-weight:normal;}
+
+.reach-out{display:flex;}
+.reach-out>*{margin-bottom:30px;position:relative;}
+.reach-out>div:first-child{flex:80% 1;}
+.reach-out>div:last-child{flex:20% 1;}
+.reach-out img{width:100%;border-radius:50%;}
+.reach-out img:hover{box-shadow:0 50px 50px -50px #000;transition:.3s ease-out;}
+
+footer{margin:1em 0;text-align:center;}
+</style>
+</head>
+
+<body>
+
+<header>
+	<a class="logo">&lt;<span>Faisal Akhtar</span>&#47;&gt;</a>
+	<ul>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#experience">Work Experiences</a></li>
+		<li><a href="#projects">Projects</a></li>
+		<li><a href="#achievements">Achievements</a></li>
+		<li><a href="#reach-out">Contact</a></li>
+	</ul>
+</header>
+
+<main>
+	<div class="landing">
+		<h1>Hi all, I'm Faisal <span>&#x1F44B;</span></h1>
+		<p>A passionate Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.</p>
+		<div class="social-media">
+			<a href="" target="_blank"><i class="fab fa-github"></i></a>
+			<a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+			<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		</div>
+	</div>
+	<div><img src="faisal2.svg"></div>
+</main>
+
+<main id="skills">
+	<div><img src="faisal3.svg"></div>
+	<div class="skills main-div">
+		<h1>What I do</h1>
+		<p>CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
+		<div class="skill-set">
+			<ul>
+				<li name="html-5">
+					<i class="fab fa-html5"></i>
+					<p>html-5</p>
+				</li>
+				<li name="css3">
+					<i class="fab fa-css3-alt"></i>
+					<p>css3</p>
+				</li>
+				<li name="sass">
+					<i class="fab fa-sass"></i>
+					<p>sass</p>
+				</li>
+				<li name="JavaScript">
+					<i class="fab fa-js"></i>
+					<p>JavaScript</p>
+				</li>
+				<li name="nodejs">
+					<i class="fab fa-node"></i>
+					<p>nodejs</p>
+				</li>
+				<li name="npm">
+					<i class="fab fa-npm"></i>
+					<p>npm</p>
+				</li>
+				<li name="sql-database">
+					<i class="fas fa-database"></i>
+					<p>sql-database</p>
+				</li>
+				<li name="aws">
+					<i class="fab fa-aws"></i>
+					<p>aws</p>
+				</li>
+				<li name="firebase">
+					<i class="fas fa-fire"></i>
+					<p>firebase</p>
+				</li>
+				<li name="python">
+					<i class="fab fa-python"></i>
+					<p>python</p>
+				</li>
+				<li name="illustrator">
+					<i class="fab fa-adobe"></i>
+					<p>illustrator</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p>&#9889; Develop highly interactive Front end / User Interfaces for your web and mobile applications</p>
+			<p>&#9889; Develop highly interactive Front end / User Interfaces for your web and mobile applications</p>
+			<p>&#9889; Develop highly interactive Front end / User Interfaces for your web and mobile applications</p>
+		</div>
+	</div>
+</main>
+
+<main>
+	<div class="main-div">
+		<h1>Proficiency</h1>
+		<div class="skills-meter">
+			<p>Frontend</p>
+			<div class="meter"><span style="width:90%;"></span></div>
+		</div>
+		<div class="skills-meter">
+			<p>Backend</p>
+			<div class="meter"><span style="width:70%;"></span></div>
+		</div>
+		<div class="skills-meter">
+			<p>Programming</p>
+			<div class="meter"><span style="width:80%;"></span></div>
+		</div>
+		<div class="skills-meter">
+			<p>Designing</p>
+			<div class="meter"><span style="width:60%;"></span></div>
+		</div>
+	</div>
+	<div class="smol"><img src="faisal.svg"></div>
+</main>
+
+<main id="experience">
+	<div class="main-div">
+		<h1>Experiences</h1>
+		<div class="experience card-divs">
+
+			<div class="cards">
+				<div class="card-header" style="background-color:#1b74f4;">
+					<div class="card-gradient"></div>
+					<h5>MRV Research</h5>
+					<img src="faisal.svg">
+				</div>
+				<div class="card-content">
+					<h5>Web Developer</h5>
+					<h5>June 2019-Present Date</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+
+			<div class="cards">
+				<div class="card-header" style="background-color:#fb5c5d;">
+					<div class="card-gradient"></div>
+					<h5>MRV Research</h5>
+					<img src="faisal.svg">
+				</div>
+				<div class="card-content">
+					<h5>Web Developer</h5>
+					<h5>June 2019-Present Date</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</main>
+
+<main id="projects">
+	<div class="main-div">
+		<h1>Big Projects</h1>
+		<p>SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH</p>
+		<div class="projects">
+			<a href="https://myfastclaim.com" title="MyFastClaim" target="_blank"><img src="https://www.myfastclaim.com/assets/img/icon.png"></a>
+			<a href="https://myfastclaim.com" title="MyFastClaim" target="_blank"><img src="https://faisalakhtar.github.io/img/logo.png"></a>
+		</div>
+	</div>
+</main>
+
+<main id="achievements">
+	<div class="achievements main-div">
+		<h1>Achievements - Certifications &#x1f3c6;</h1>
+		<p>ACHIEVEMENTS, CERTIFICATIONS, AWARD LETTERS AND SOME COOL STUFF THAT I HAVE DONE !</p>
+		<div class="card-divs">
+
+			<div class="cards">
+				<div class="card-header">
+					<img src="faisal.svg">
+				</div>
+				<div class="card-content">
+					<h5>Web Developer</h5>
+					<h5>June 2019-Present Date</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+
+			<div class="cards">
+				<div class="card-header">
+					<img src="faisal.svg">
+				</div>
+				<div class="card-content">
+					<h5>Web Developer</h5>
+					<h5>June 2019-Present Date</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</main>
+
+<main id="reach-out">
+	<div>
+		<h1>Reach out to me!</h1>
+		<div class="reach-out">
+			<div>
+				<p>DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL</p>
+				<h2>"Front-end & UX-UI passionate | Learning full stack web development | Computer Science student"</h2>
+				<p><svg viewBox="0 0 12 16" version="1.1" width="20" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg> New Delhi, India</p>
+				<div class="social-media">
+					<a href="" target="_blank"><i class="fab fa-github"></i></a>
+					<a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+					<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				</div>
+			</div>
+			<div>
+				<img src="https://faisalakhtar.github.io/img/Faisal.jpg">
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer>Made with &#x2764;&#xfe0f; by Faisal</footer>
+</body>
+</html>
