@@ -25,17 +25,22 @@ code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}
 html,body{scroll-behavior:smooth;}
 body{font:19px 'Montserrat',sans-serif;margin:0;}
 
-header,main{max-width:90%;padding:20px 10px;margin:0 auto;}
 h1{line-height:1.1;}
 p,footer{color:#868e96;}
 ul{list-style-type:none;padding:0;margin:0;clear:both;overflow:hidden;}
+.smol{display:none;}
+.bar1,.bar2,.bar3{width:25px;height:3px;background-color:#152994;margin:4px 0;transition:0.4s;border-radius:25px;}
+.openMenu .bar1{-webkit-transform:rotate(-45deg) translate(-5px,3px);transform:rotate(-45deg) translate(-5px,3px);}
+.openMenu .bar2{opacity:0;}
+.openMenu .bar3{-webkit-transform:rotate(45deg) translate(-6px,-5px);transform:rotate(45deg) translate(-6px,-5px);}
 
-header{display:flex;align-items:center;justify-content:space-between;}
-header .logo{color:#868e96;font-size:1.5em;}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 5%;width:100%;background-color:white;z-index:3;}
+header .logo{color:#868e96;font-size:1.5em;line-height:1;}
 header .logo span{font-family:Agustina;color:darkBlue;font-weight:bold;margin:0 10px;}
 header ul li{float:left;}
 header ul li a{display:block;padding:20px;margin-left:10px;text-decoration:none;color:black;transition-duration:0.2s;}
 header ul li a:hover{background-color:#f4f4f4;}
+.menu-bars{float:right;}
 
 .card-divs{clear:both;}
 .cards{width:calc(33.33% - 2rem - 2px);float:left;box-shadow:0 10px 30px -15px rgba(0,0,0,.2);border-radius:10px;border:1px solid hsla(0,0%,82.7%,.397);text-align:center;overflow:hidden;transition-duration:0.2s;}
@@ -48,7 +53,7 @@ header ul li a:hover{background-color:#f4f4f4;}
 .card-content h5{font-size:20px;padding-top:1rem;line-height:normal;margin:0;}
 .card-content h5:first-child{font-size:25px;padding-top:1.5rem;margin:0;}
 
-main{margin-top:2rem;display:flex;}
+main{margin-top:2rem;display:flex;max-width:90%;padding:20px 10px;margin:0 auto;}
 main:nth-child(2n+1){margin-top:4rem;}
 main>*{flex:1 1;margin-bottom:30px;position:relative;}
 .landing h1{font-size:70px;}
@@ -134,22 +139,40 @@ footer{margin:1em 0;text-align:center;}
 	.cards{width:calc(100% - 2rem - 2px);max-width:450px;float:none;}
 	.cards:nth-child(n){margin:1rem auto;}
 	.projects a{width:30%;margin-right:3.33%;}
-	.smol{display:none;}
+	.lorge{display:none;}
+	.smol{display:unset;}
 	.reach-out{text-align:center;}
 	.reach-out img{position:static;width:250px;transform:unset;}
 	.reach-out>div:last-child{order:1;}
 	.reach-out>div:first-child{order:2;}
 }
-@media screen and (max-width:600px){
-	header ul{display:none;}
+@media screen and (max-width:650px){
+	header{display:block;}
+	header ul{width:100%;height:0;transition-duration:0.5s;}
+	header ul.openMenu{height:290px;margin-top:20px;}
+	header ul li{float:none;}
 	body{font-size:14px;}
 	.cards{width:100%;margin-left:0;margin-right:0;}
+	.landing{text-align:center;}
+	main h1{text-align:center;}
+	main,.reach-out{flex-direction:column;}
 	main:nth-child(n){margin-top:0;}
 	.landing h1{font-size:30px;}
+	#skills>div:last-child{order:1;}
+	#skills>div:first-child{order:2;}
+	.cards{width:100%;max-width:450px;float:none;}
+	.cards:nth-child(n){margin:1rem auto;}
+	.projects a{width:30%;margin-right:3.33%;}
 	.projects a{width:47.5%;margin-right:2.5%;}
 	.main-div h1{font-size:26px;}
 	.landing p{font-size:18px;line-height:1.5;}
 	.social-media i{border-radius:2rem;font-size:1rem;height:2rem;line-height:2rem;width:2rem;}
+	.lorge{display:none;}
+	.smol{display:unset;}
+	.reach-out{text-align:center;}
+	.reach-out img{position:static;width:250px;transform:unset;}
+	.reach-out>div:last-child{order:1;}
+	.reach-out>div:first-child{order:2;}
 	.reach-out>*{margin-bottom:0;}
 	.reach-out h2{font-size:16px;line-height:32px;}
 }
@@ -160,6 +183,11 @@ footer{margin:1em 0;text-align:center;}
 
 <header>
 	<a class="logo">&lt;<span>Faisal Akhtar</span>&#47;&gt;</a>
+	<a class="smol menu-bars" onclick="openMenu(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</a>
 	<ul>
 		<li><a href="#skills">Skills</a></li>
 		<li><a href="#experience">Work Experiences</a></li>
@@ -265,7 +293,7 @@ footer{margin:1em 0;text-align:center;}
 			<div class="meter"><span style="width:60%;"></span></div>
 		</div>
 	</div>
-	<div class="smol"><img src="faisal.svg"></div>
+	<div class="lorge"><img src="faisal.svg"></div>
 </main>
 
 <main id="experience">
@@ -370,5 +398,12 @@ footer{margin:1em 0;text-align:center;}
 </main>
 
 <footer>Made with &#x2764;&#xfe0f; by Faisal</footer>
+
+<script type="text/javascript">
+function openMenu(arg) {
+	arg.classList.toggle('openMenu')
+	document.querySelector("header ul").classList.toggle('openMenu')
+}
+</script>
 </body>
 </html>
