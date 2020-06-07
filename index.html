@@ -57,6 +57,7 @@ main{margin-top:2rem;display:flex;max-width:90%;padding:20px 10px;margin:0 auto;
 main:nth-child(2n+1){margin-top:4rem;}
 main>*{flex:1 1;margin-bottom:30px;position:relative;}
 .landing h1{font-size:70px;}
+#waving-hand{display:inline-block;transform:rotate(0deg) translate(1.5px,-1.5px);transition-duration:0.3s;}
 .landing p{font-size:30px;line-height:60px;}
 .social-media{font-size:2em;margin-top:20px;}
 .social-media i{color:#fff;border-radius:2.6rem;cursor:pointer;display:inline-block;font-size:1.3rem;height:2.6rem;line-height:2.6rem;position:relative;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:2.6rem;margin:0 5px 10px;transition-duration:0.2s;}
@@ -108,6 +109,10 @@ main>*{flex:1 1;margin-bottom:30px;position:relative;}
 .reach-out img:hover{box-shadow:0 50px 50px -50px #000;transition:.3s ease-out;}
 
 footer{margin:1em 0;text-align:center;}
+
+.loading{position:fixed;height:100%;width:100%;top:0;left:0;background-color:white;z-index:5;transition-duration:0.5s;}
+.loading>div{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:inline;color:#868e96;font-size:2.5em;transition-duration:0.5s;line-height:1;}
+.loading>div>span{font-family:Agustina,cursive;margin:0 10px;color:darkBlue;font-weight:bold;}
 
 @media screen and (max-width:1400px) {
 	.cards{width:calc(33.33% - 1rem - 2px);margin:0.5rem;}
@@ -198,7 +203,7 @@ footer{margin:1em 0;text-align:center;}
 
 <main>
 	<div class="landing">
-		<h1>Hi all, I'm Faisal <span>&#x1F44B;</span></h1>
+		<h1>Hi all, I'm Faisal <spa id="waving-hand"n>&#x1F44B;</span></h1>
 		<p>A passionate Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.</p>
 		<div class="social-media">
 			<a href="" target="_blank"><i class="fab fa-github"></i></a>
@@ -398,10 +403,36 @@ footer{margin:1em 0;text-align:center;}
 
 <footer>Made with &#x2764;&#xfe0f; by Faisal</footer>
 
+<div class="loading"><div>&lt;<span></span>&#47;&gt;</div></div>
+
 <script type="text/javascript">
 function openMenu(arg) {
 	arg.classList.toggle('openMenu')
 	document.querySelector("header ul").classList.toggle('openMenu')
+}
+
+var i=0, txt='Faisal Akhtar'
+function typeWriter() {
+	if (i < txt.length) {
+		document.querySelector(".loading div span").innerHTML += txt.charAt(i)
+		i++
+		setTimeout(typeWriter, 200)
+	} else if(i == txt.length) {
+		document.querySelector(".loading div").style.transform = "none"
+		document.querySelector(".loading div").style.top = document.querySelector("a.logo").offsetTop+"px"
+		document.querySelector(".loading div").style.left = "5%"
+		document.querySelector(".loading div").style.fontSize = "1.5em"
+		setTimeout(function() { document.getElementsByClassName('loading')[0].style.opacity = "0" }, 500)
+		setTimeout(function() { document.getElementsByClassName('loading')[0].remove() }, 1000)
+	}
+}
+window.onload = function() {
+	typeWriter()
+
+	let x=5
+	setInterval(function() {
+		document.getElementById('waving-hand').style.transform = "rotate("+(x=-x)+"deg) translate(1.5px,-1.5px)"
+	}, 300)
 }
 </script>
 </body>
