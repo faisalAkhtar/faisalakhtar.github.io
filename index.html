@@ -104,6 +104,18 @@ main>*{flex:1 1;margin-bottom:30px;position:relative;}
 .achievements .card-content{padding-top:0;}
 .achievements .card-content h5{font-weight:normal;}
 
+.testimonials>div{display:flex;margin-bottom:30px;max-width:1200px;box-shadow:0 10px 30px -15px rgba(0,0,0,.2);}
+.testimonials .testimonial-header,.testimonials .testimonial-content{padding:2.5%;}
+.testimonials .testimonial-header{flex:0.2 1;position:relative;}
+.testimonials .testimonial-header img{width:100%;border-radius:50%;}
+.testimonials .testimonial-header img:hover{box-shadow:0 15px 20px -20px #000;transition:.3s ease-out;}
+.testimonials .testimonial-header h5{font-size:100%;margin:0.75em 0 0 0;text-align:center;color:#868e96;}
+.testimonials .testimonial-header h5:last-child{font-size:95%;}
+.testimonials .testimonial-header a{color:#645beb;padding:2px;text-decoration:none;cursor:pointer;transition-duration:0.2s;}
+.testimonials .testimonial-header a:hover{background-color:#645beb;color:white;}
+.testimonials .testimonial-content{flex:0.8 1;margin-bottom:30px;position:relative;text-align:justify;}
+.testimonials .testimonial-content svg{width:100px;}
+
 .reach-out{display:flex;}
 .reach-out>*{margin-bottom:30px;position:relative;}
 .reach-out>div:first-child{flex:80% 1;}
@@ -135,6 +147,8 @@ footer{margin:1em 0;text-align:center;}
 	.big-projects a{width:22.5%;margin-right:2.5%;}
 	.reach-out>div:first-child{flex:70% 1;}
 	.reach-out>div:last-child{flex:30% 1;}
+	.testimonials .testimonial-header{flex:0.33 1;position:relative;}
+	.testimonials .testimonial-content{flex:0.67 1;margin-bottom:30px;position:relative;}
 }
 
 @media screen and (max-width:1050px) and (orientation:portrait){
@@ -175,8 +189,11 @@ footer{margin:1em 0;text-align:center;}
 	.social-media i{border-radius:2rem;font-size:1rem;height:2rem;line-height:2rem;width:2rem;}
 	.lorge{display:none;}
 	.smol{display:unset;}
+	.testimonials>div{display:block;}
+	.testimonials .testimonial-header img{max-width:250px;width:100%;margin:0 auto;display:block;}
+	.testimonials .testimonial-content svg{float:left;padding:2.5%;width:33.33%;}
 	.reach-out{text-align:center;}
-	.reach-out img{position:static;width:250px;transform:unset;}
+	.reach-out img{position:static;max-width:250px;width:100%;transform:unset;}
 	.reach-out>div:last-child{order:1;}
 	.reach-out>div:first-child{order:2;}
 	.reach-out>*{margin-bottom:0;}
@@ -198,7 +215,7 @@ footer{margin:1em 0;text-align:center;}
 		<li><a href="#skills">Skills</a></li>
 		<li><a href="#experience">Work Experiences</a></li>
 		<li><a href="#projects">Projects</a></li>
-		<li><a href="#achievements">Achievements</a></li>
+		<li><a href="#testimonials">Testimonials</a></li>
 		<li><a href="#reach-out">Contact</a></li>
 	</ul>
 </header>
@@ -219,7 +236,7 @@ footer{margin:1em 0;text-align:center;}
 </main>
 
 <main id="skills">
-	<div><img src="faisal3.svg"></div>
+	<div><img src="faisal2.svg"></div>
 	<div class="skills main-div">
 		<h1>Skills & Tools</h1>
 		<p>THE SKILLS, TOOLS AND TECHNOLOGIES I USE TO BRING YOUR PRODUCTS TO LIFE</p>
@@ -396,6 +413,81 @@ footer{margin:1em 0;text-align:center;}
 			<div class="big-projects">
 				<a href="https://myfastclaim.com" title="MyFastClaim" target="_blank"><img src="https://www.myfastclaim.com/assets/img/icon.png"></a>
 			</div>
+		</div>
+	</div>
+</main>
+
+<main id="testimonials">
+	<div class="main-div">
+		<h1>Testimonials</h1>
+		<p>NICE THINGS PEOPLE HAVE SAID ABOUT ME</p>
+		<div class="testimonials">
+			<div>
+				<div class="testimonial-header">
+					<img src="https://avatars.githubusercontent.com/Ridhwanluthra">
+					<h5>Ridhwan Luthra</h5>
+					<h5>CTO, <a href="https://myfastclaim.com/">3i: Innovations in Insurance</a></h5>
+				</div>
+				<div class="testimonial-content">
+					<svg viewBox="0 0 512 512">
+						<path style="fill:#645beb;" d="M224.001,74.328c5.891,0,10.667-4.776,10.667-10.667s-4.776-10.667-10.667-10.667
+							c-123.653,0.141-223.859,100.347-224,224v64c-0.185,64.99,52.349,117.825,117.338,118.01
+							c64.99,0.185,117.825-52.349,118.01-117.338c0.185-64.99-52.349-117.825-117.338-118.01c-38.374-0.109-74.392,18.499-96.506,49.861
+							C23.48,163.049,113.514,74.485,224.001,74.328z"/>
+						<path style="fill:#645beb;" d="M394.667,223.662c-38.154,0.03-73.905,18.63-95.829,49.856
+							c1.976-110.469,92.01-199.033,202.496-199.189c5.891,0,10.667-4.776,10.667-10.667s-4.776-10.667-10.667-10.667
+							c-123.653,0.141-223.859,100.347-224,224v64c0,64.801,52.532,117.333,117.333,117.333S512,405.796,512,340.995
+							S459.469,223.662,394.667,223.662z"/>
+					</svg>
+					<p>Faisal worked as a front-end dev with us. He has been terrific - collaborative, diligent, honest and professional, offering solutions we had not thought about. We have found that he delivers efficiently and in a timely manner.</p>
+					<p>His work on our webapp and dashboard successfully communicate to prospective clients the kind of people and has brought innumerable clients to us through a streamlined and attractive website. I would recommend Faisal in a heartbeat.</p>
+				</div>
+			</div>
+
+			<div>
+				<div class="testimonial-header">
+					<img src="https://avatars.githubusercontent.com/robotiste">
+					<h5>Vikas Kamboj</h5>
+					<h5>Scrum Master, <a href="https://myfastclaim.com/">3i: Innovations in</a></h5>
+				</div>
+				<div class="testimonial-content">
+					<svg viewBox="0 0 512 512">
+						<path style="fill:#645beb;" d="M224.001,74.328c5.891,0,10.667-4.776,10.667-10.667s-4.776-10.667-10.667-10.667
+							c-123.653,0.141-223.859,100.347-224,224v64c-0.185,64.99,52.349,117.825,117.338,118.01
+							c64.99,0.185,117.825-52.349,118.01-117.338c0.185-64.99-52.349-117.825-117.338-118.01c-38.374-0.109-74.392,18.499-96.506,49.861
+							C23.48,163.049,113.514,74.485,224.001,74.328z"/>
+						<path style="fill:#645beb;" d="M394.667,223.662c-38.154,0.03-73.905,18.63-95.829,49.856
+							c1.976-110.469,92.01-199.033,202.496-199.189c5.891,0,10.667-4.776,10.667-10.667s-4.776-10.667-10.667-10.667
+							c-123.653,0.141-223.859,100.347-224,224v64c0,64.801,52.532,117.333,117.333,117.333S512,405.796,512,340.995
+							S459.469,223.662,394.667,223.662z"/>
+					</svg>
+					<p>Working with Faisal has been a pleasure. Through in-depth questions, he has a knack for hitting the nail on the head with branding requirements first time round, saving valuable time on a lot of back and forth.</p>
+					<p>With his skills and natural creativity, he works quickly and efficiently, presenting professional options and offering sound advice to translate the vision in my head into work beyond what I envisioned. I have been thrilled with the results!</p>
+				</div>
+			</div>
+
+			<div>
+				<div class="testimonial-header">
+					<img src="https://avatars.githubusercontent.com/goyalshubhangi">
+					<h5>Shubhangi Goyal</h5>
+					<h5>President, <a href="https://sociovation.github.io/">Centre for Social Innovation</a></h5>
+				</div>
+				<div class="testimonial-content">
+					<svg viewBox="0 0 512 512">
+						<path style="fill:#645beb;" d="M224.001,74.328c5.891,0,10.667-4.776,10.667-10.667s-4.776-10.667-10.667-10.667
+							c-123.653,0.141-223.859,100.347-224,224v64c-0.185,64.99,52.349,117.825,117.338,118.01
+							c64.99,0.185,117.825-52.349,118.01-117.338c0.185-64.99-52.349-117.825-117.338-118.01c-38.374-0.109-74.392,18.499-96.506,49.861
+							C23.48,163.049,113.514,74.485,224.001,74.328z"/>
+						<path style="fill:#645beb;" d="M394.667,223.662c-38.154,0.03-73.905,18.63-95.829,49.856
+							c1.976-110.469,92.01-199.033,202.496-199.189c5.891,0,10.667-4.776,10.667-10.667s-4.776-10.667-10.667-10.667
+							c-123.653,0.141-223.859,100.347-224,224v64c0,64.801,52.532,117.333,117.333,117.333S512,405.796,512,340.995
+							S459.469,223.662,394.667,223.662z"/>
+					</svg>
+					<p>An amazing teammate to work with. We were together in the Center for Social Innovation. Faisal worked as the technical head in the society. He is perfect in whatever work he does. He built a website for the society in which many NGOs were linked under one umbrella. He built a user-friendly website and engaged his juniors in the same.</p>
+					<p>He is really talented and thinks out of the box, an all-rounder. Completely devoted towards his work and always ready to help the needy and poor.</p>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </main>
