@@ -3,10 +3,9 @@
 ![](https://img.shields.io/static/v1?style=for-the-badge&label=Status&message=Deployed&color=success)
 &emsp;
 
-![](light.png)
-![](dark.png)
+![](portfolio.gif)
 
-<p align="center"><u>Refreshed and Updated</u></p>
+<p align="center"><u>Switching between dark and light modes</u></p>
 
 ## Sections covered
 - [x] Tools
