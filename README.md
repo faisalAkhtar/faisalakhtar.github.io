@@ -25,7 +25,7 @@ Click [here](https://faisalakhtar.github.io/) to go to the portfolio.
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/66px-Adobe_Illustrator_CC_icon.svg.png" width="60">
 
 ### Web Interface
-<img src="https://clipart.info/images/ccovers/1499794874html5-js-css3-logo-png.png" height="80">
+<img src="https://user-images.githubusercontent.com/41644472/87831800-19b87e80-c8a2-11ea-9913-2ff6be44d00b.png" height="80">
 
 ### External Libraries
 - Scrolling animation - [AOS](https://github.com/michalsnik/aos)
