@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="author" content="Faisal Akhtar">
+    <meta name="keywords" content="Faisal,Akhtar,Faisal Akhtar,Sociovation,Turington,Programming,Python,Coder,developer,open source,programmer,NodeJS,HTML,HTML5,CSS,CSS3,JavaScript,JS,Bootstrap,Jquery,j-query,Python,Java,CPP,C++,C,Angular,JSON,MS word,excel,powerpoint,Ramanujan College,Delhi University,Ramanujan,DU,Alan Turing,Coding,Technical,Tech,Techie">
+    <meta name="title" content="Faisal Akhtar — My web portfolio">
+    <meta name="description" content="50% developer,50% designer and 100% lovable. Full stack developer. First love's biryani,second's coding.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://faisalakhtar.github.io">
+    <meta property="og:site_name" content="Faisal Akhtar — My web portfolio">
+    <meta property="og:title" content="Faisal Akhtar — My web portfolio">
+    <meta property="og:description" content="50% developer,50% designer and 100% lovable. Full stack developer. First love's biryani,second's coding.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image" content="https://faisalakhtar.github.io/image.jpg">
+    <meta property="og:site_name" content="Faisal Akhtar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://faisalakhtar.github.io">
+    <meta name="twitter:site_name" content="Faisal Akhtar — My web portfolio">
+    <meta name="twitter:title" content="Faisal Akhtar — My web portfolio">
+    <meta name="twitter:description" content="50% developer,50% designer and 100% lovable. Full stack developer. First love's biryani,second's coding.">
+    <meta name="twitter:type" content="website">
+    <meta name="twitter:image" itemprop="image" content="https://faisalakhtar.github.io/image.jpg">
+    <meta name="twitter:image:alt" content="Faisal Akhtar photo">
+    <meta content="telephone=no" name="format-detection">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <meta content="Faisal Akhtar" name="author">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <title>404 - Page not Found</title>
+    <link rel="stylesheet" type="text/css" href="/error/assets/error.css">
+    <style type="text/css">
+        @font-face{font-family:'Syne Mono';src:url(/home/SyneMono-Regular.ttf);}
+        html,body{margin:0;height:100%;}
+        body{background-color:#191923;color:#FBFEF9;font:20px 'Syne Mono',sans-serif;line-height:1.5;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:flex-end;padding:50px;text-shadow:0px -2px #191923;word-break:break-word;}
+        img{position:absolute;top:50px;right:20px;width:450px;z-index:-1;animation:floating 3s cubic-bezier(0.47,0,0.745,0.715) 0s infinite alternate forwards;}
+        h2{font-weight:normal;}
+        main{max-width:500px;width:100%;}
+        footer{position:absolute;right:24px;bottom:14px;}
+        button{font-size:inherit;font-family:inherit;padding:8px 16px;cursor:pointer;border:none;background-color:#0E79B2;color:#FBFEF9;border-radius:4px;outline-color:#0E79B2;}
+        .buttons button:last-child{margin-left:24px;background-color:#FBFEF9;color:#0E79B2;}
+        @keyframes floating{0%{transform:translate(0,0) rotate(0);}25%{transform:translate(0,3px) rotate(1deg);}50%{transform:translate(3px,3px) rotate(0);}75%{transform:translate(3px,0) rotate(-1deg);}100%{transform:translate(0,3px) rotate(-2deg);}}
+        @media screen and (max-width:767px){body{text-align:center;line-height:1;}img{width:350px;}footer{left:24px;}}
+    </style>
+</head>
+
+<body>
+    <img src="/img/lost.png" alt="Error 404">
+
+    <main>
+        <h2>404</h2>
+        <h1>Lost in space</h1>
+        <p>Looks like you reached an unmapped portion of this universe. There are only two ways from here.</p>
+
+        <div class="buttons">
+            <button onclick="location.href='/'">Go Home</button>
+            <button onclick="window.history.go(-1)">Go Back</button>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        window.onload = () => document.querySelector("footer").innerText = window.innerWidth + " x " + window.innerHeight
+        window.onresize = () => document.querySelector("footer").innerText = window.innerWidth + " x " + window.innerHeight
+    </script>
+</body>
+
+</html>
