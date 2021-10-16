@@ -1,0 +1,82 @@
+body.dark, body.dark .loadingScreen {
+    background-color: #10151b;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+body.dark code {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .experienceCards {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, .5);
+    border: none;
+}
+
+body.dark .experienceCards:hover {
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, .5);
+}
+
+body.dark header .title span, body.dark .loadingScreen>div>span, body.dark .endorsementsOuterDiv .endorserImg a {
+    color: #88a7ff;
+}
+
+body.dark header ul li a, body.dark header ul li a:hover i {
+    background-color: #10151b;
+    color: inherit;
+}
+
+body.dark header ul li a:hover, body.dark header ul li a i {
+    background-color: #25323e;
+}
+
+body.dark .topL, body.dark .midL, body.dark .btmL {
+    background-color: #88a7ff;
+}
+
+body.dark .themeDiv:hover {
+    background-color: transparent;
+}
+
+body.dark main>div>img {
+    filter: drop-shadow(2px 4px 10px #000000);
+}
+
+body.dark .projectsOuterDiv .swiperSlide {
+    background-color: #10151b;
+}
+
+body.dark .fa-github:hover {
+    background-color: transparent;
+    color: white;
+}
+
+body.dark .proficiencyHolder .proficiencyMeter {
+    background-color: #444444;
+}
+
+body.dark .proficiencyHolder .proficiencyMeter {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+body.dark .endorsementsOuterDiv>div {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, .5);
+}
+
+body.dark .endorsementsOuterDiv .endorserTxt svg {
+    fill: #88a7ff;
+}
+
+body.dark .endorsementsOuterDiv .endorserImg a:hover {
+    background-color: #88a7ff;
+    color: white;
+}
+
+body.dark .popupMsg {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+body.dark .reachMeOuterDiv p svg {
+    fill: white;
+}
