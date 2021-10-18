@@ -111,7 +111,12 @@ document.onkeyup = function (e) {
     }
 }
 
+document.onload = function () {
+    console.log('Document loaded')
+}
+
 window.onload = function () {
+    console.log('Window loaded')
     modeCheckBoxEl.addEventListener('change', function () {
         switchMode(modeCheckBoxEl.checked)
     })
