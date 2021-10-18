@@ -1,6 +1,7 @@
 const modeCheckBoxEl = document.querySelector('.modeCheckBox');
 let isDarkMode = sessionStorage.getItem('darkMode') == 'true';
 modeCheckBoxEl.checked = isDarkMode;
+init();
 
 function openMenu(arg) {
     arg.classList.toggle('open')
@@ -111,12 +112,7 @@ document.onkeyup = function (e) {
     }
 }
 
-document.onload = function () {
-    console.log('Document loaded')
-}
-
-window.onload = function () {
-    console.log('Window loaded')
+function init () {
     modeCheckBoxEl.addEventListener('change', function () {
         switchMode(modeCheckBoxEl.checked)
     })
