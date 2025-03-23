@@ -87,10 +87,12 @@
     }
     .bigProject a {
         width: 30%;
-        margin-right: 3.33%;
+        float: unset;
+        display: block;
+        margin: auto;
     }
-    .asjg {
-        display: none;
+    .bigProjectDesc {
+        text-align: center;
     }
     .lorge {
         display: none;
@@ -155,12 +157,7 @@
         padding: 0;
     }
     .bigProject a {
-        width: 30%;
-        margin-right: 3.33%;
-    }
-    .bigProject a {
         width: 47.5%;
-        margin-right: 2.5%;
     }
     .projectsOuterDiv .swiperHolder {
         width: calc(100vw - 20px);
@@ -173,9 +170,6 @@
     }
     .projectsOuterDiv .skillsHolder li {
         width: 40px;
-    }
-    .asjg {
-        display: none;
     }
     .common h1 {
         font-size: 26px;

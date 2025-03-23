@@ -587,6 +587,7 @@ main>div>img {
     color: #ffffff;
     font-size: 25px;
     font-weight: 700;
+    margin-block-start: 1em;
 }
 
 .experienceOuterDiv .cardTop img {
