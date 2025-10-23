@@ -32,7 +32,7 @@
         width: 22.5%;
         margin-right: 2.5%;
     }
-    .nsbi .nsbj .skillsHolder {
+    .nsbi .slideHolder .skillsHolder {
         float: unset;
     }
     .reachMeOuterDiv>div:first-child {
@@ -155,6 +155,12 @@
     }
     .experienceOuterDiv.experienceHolder {
         padding: 0;
+    }
+    .slideHolder {
+        text-align: center;
+    }
+    .slideHolder p {
+        text-align: justify;
     }
     .bigProject a {
         width: 47.5%;
